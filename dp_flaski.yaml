@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: flaskiSet
+  labels:
+    app: flaski
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flaski
+  template:
+    metadata:
+      labels:
+        app: flaski
+        version: "2"
+    spec:
+      containers:
+        - name: flaski
+          image: meetupk8sworkshop/k8s-workshop-1-01_miniflask
