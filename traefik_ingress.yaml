@@ -1,3 +1,4 @@
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -7,10 +8,10 @@ metadata:
     traefik.frontend.rule.type: PathPrefixStrip
 spec:
   rules:
-  - host: master
+  - host: master #this is your domain...
     http:
       paths:
       - path: /
         backend:
-          serviceName: flaskiservice
+          serviceName: traeflaski
           servicePort: http
