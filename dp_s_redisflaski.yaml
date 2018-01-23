@@ -22,7 +22,7 @@ spec:
             - name: REDIS_HOST
               value: "localhost"
             - name: REDIS_PORT
-              value: 6379
+              value: "6379"
         - name: redis
           image: redis:3.2-alpine
 ---
