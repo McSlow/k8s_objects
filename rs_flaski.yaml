@@ -1,14 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: ReplicaSet
 metadata:
-  name: flaski
+  name: flaskiSet
 spec:
   replicas: 2
   template:
     metadata:
       labels:
         app: flaski
-        version: 2
+        version: "2"
     spec:
       containers:
         - name: flaski
