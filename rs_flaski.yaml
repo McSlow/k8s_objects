@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: flaski
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: flaski
+        version: 2
+    spec:
+      containers:
+        - name: flaski
+          image: meetupk8sworkshop/k8s-workshop-1-01_miniflask

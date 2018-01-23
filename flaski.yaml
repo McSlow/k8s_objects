@@ -1,0 +1,13 @@
+#flaski.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flaski
+spec:
+  containers:
+    - image: meetupk8sworkshop/k8s-workshop-1-01_miniflask
+      name: flaski-container
+      ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
